@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[left=3.7cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[sort, comma]{natbib}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[toc,page]{appendix}
+\usepackage{multirow}
+\author{P A A Randika}
+
+\linespread{1.25}
+\renewcommand\bibname{References}
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\include{chapters/title}
+\include{chapters/declaration}
+\include{chapters/abstract}
+\include{chapters/acknowledgement}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+\clearpage
+%\setcounter{chapter}{1}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\include{chapters/acronyms}
+\clearpage
+
+\pagenumbering{arabic}
+
+\include{chapters/chapter}
+\include{chapters/another_chapter}
+\clearpage
+
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{agsm}
+\bibliography{thesisb}
+\include{chapters/apendix}
+\end{document}
